@@ -32,3 +32,25 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 .container {
   display:flex;
 }
+
+/* We are going to talk about flex property which goes on the individual flex item
+What does flex do? Answers the question of what do I do with this extra space or
+what do I do when I don't have enough space. The whole point of flexbox is that
+it is not going to break your layout if you have too much or not enough space. It
+will sort of figure out where everything needs to go. The width of your flex items
+by default is auto. It just the width of the content inside of the flex items.
+*/
+
+.box {
+  /* Each of the flex items regardless of how much content that they have, they
+  are all taking the same amount of space. So flex is at what proportion
+  should I scale myself up or down when we have extra space or not enough space
+  */
+  flex: 1;
+}
+
+.box2 {
+  /* Becomes twice the size of all the other flex items, as when there is extra
+  space or enough space box2 should have double the amount of all the other ones */
+  flex: 2;
+}
