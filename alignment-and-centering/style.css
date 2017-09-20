@@ -30,21 +30,5 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 /* We start writing out flexbox here. The above is just page setup */
 .container {
-  display: flex;
-}
-
-.box {
-  /* evenly distribute the width of each box amongst each other */
-  flex: 1;
-}
-
-.box3 {
-  /* order property will take a number and move the flex item either to the
-  right or left. The default order is 0; 1 moves it to the right and -1 moves it
-  to the left. */
-  order: 1;
-}
-
-.box5 {
-  order: 2;
+  display:flex;
 }
