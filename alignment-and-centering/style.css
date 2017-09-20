@@ -9,7 +9,7 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 /* Some default styles to make each box visible */
 .box {
   color:white;
-  font-size: 100px;
+  font-size: 20px;
   text-align: center;
   text-shadow:4px 4px 0 rgba(0,0,0,0.1);
   padding:10px;
@@ -29,6 +29,20 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 
 /* We start writing out flexbox here. The above is just page setup */
+/* Justify content is how the items align on the main axis */
 .container {
-  display:flex;
+  display: flex;
+  /* flex-start is the default. As the items are aligned to the flex container.
+  flex-end starts on the right hand side because that is the end of the flex
+  container. center moves the items to the middle. you don't need any margin
+  tricks. space-between means provide equilvalent space between each item. space
+  -around takes into account the space of the first and last item */
+  /* now lets talk about switching around the flex direction because it impacts
+  the justify-content. When you switch from row to column, the main axis will go
+  from top to bottom instead of left to right. Remember to ask where is the main
+  axis and cross axis */
+  justify-content: space-between;
+  border: 10px solid mistyrose;
+  flex-direction: column;
+  min-height: 100vh;
 }
