@@ -51,6 +51,7 @@ by default is auto. It just the width of the content inside of the flex items.
 
 .box2 {
   /* Becomes twice the size of all the other flex items, as when there is extra
-  space or enough space box2 should have double the amount of all the other ones */
+  space or enough space box2 should have double the amount of all the other ones.
+  When I resize, at a certain point */
   flex: 2;
 }
