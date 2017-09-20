@@ -58,9 +58,37 @@ is aligned properly. If you flex-direction: column, you are switching the axises
 Our cross axis is no longer top to bottom. It is now left to right. Overall align
 items is cross axis and needs to height to work. */
 
-.container {
+/*.container {
   display: flex;
   border: 10px solid mistyrose;
   height: 100vh;
   align-items: flex-start;
+}*/
+
+/* Next we are working on Alignment and centering with align-content. Justify and
+align content focus on what to do with additional white space. We talked about
+justify-content: space-between which equally divides the space between each item
+(this is what happens in the space in the main axis) What about the cross axis?
+Align content works on the cross axis. We need extra space in our vertical axis.
+Align content only works when we have multiple lines of code and what should it
+do regarding the space on the vertical (cross) axis. So we need some wrapping.
+flex wrap will give us a true width for our flex items and will wrap around the
+container. align content by default is stretch. If you add align-content:flex-start
+the height of them is no longer stretched. If you add align-content:flex-end you
+will have extra room on the top. space between puts them in between each row. space
+around will put them space on top, in between and the bottom of each row. center
+will you want to vertically center an item. If you want to move the tenth box to
+the center, add justify-content:center. Remember with align-content, you need some
+sort of flex-wrap, and are concerned with the cross axis. */
+
+.container {
+  display: flex;
+  border: 10px solid mistyrose;
+  height: 100vh;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.box {
+  width: 33.333%;
 }
