@@ -29,8 +29,21 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 
 /* We start writing out flexbox here. The above is just page setup */
+/* flex-direction setups axis when we are doing flexbox
+In flexbox we can have the main and cross axis. If you add in flex-direction:
+row nothing happens in the container selector because that is the default.
+There is flex-direction column which stacks the divs vertically. When we are
+defining things as flex-direction row or column we have two axises, one is the
+main axis. When the flex direction is row, the main axis is from left to right. The
+cross axis will move from top to bottom. (that is the default) When the flex
+direction is column, the main axis is from top to bottom. The cross axis will move
+from left to right. There is also flex-direction:row-reverse, instead of main
+axis running from left to right, it runs from right to left. There is also flex
+-direction:column-reverse, instead of main axis running from top to bottom,
+it runs from bottom to top. */
 .container {
   display: flex;
   border: 10px solid goldenrod;
-  height: 100vh;
+  min-height: 100vh;
+
 }
