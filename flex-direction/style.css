@@ -45,5 +45,29 @@ it runs from bottom to top. */
   display: flex;
   border: 10px solid goldenrod;
   min-height: 100vh;
+  /* By adding a wrap, its says we need to stretch a container, also we need to
+  split up between the 10 boxes. If you add wrap-reverse, the cross axis will go
+  bottom to top and the main axis goes from left to right.*/
+  flex-wrap: wrap;
+  /* What happens if I change my flex-direction to column, because I have height
+  of 100 vh set on it, it reaches the bottom to the screen, can not fit the 8th
+  box (as we switched the main axis from left to right to now from top to bottom)
+  If you add a min-height instead of height, the boxes goes all the way down
+  because it never needs to wrap. */
+  /* One last thing if I change this back to flex-direction: row; or take it off
+  entirely (since that is the default) and goto box and add a margin: 10px; What
+  happens is that we created break (white space around each box). Margin is not
+  part of the box model, when I give it a width of 33% and margin: 10px that
+  means I am over budget (causes the code to break on the otherside). By adding
+  width: calc(33.3333333% -20px) that will adjust the boxes more effectively.
+  Padding and border will work in flexbox. */
+}
 
+/* Next we have flex-wrap, we are going to give these boxes widths and what happens
+when there is too much space and it goes wider than it shoud. Nature of flexbox is
+more forgiving than using floats. We are going to select each of these individual boxes
+(flex-item) */
+
+.box {
+  width: 33.3333333%;
 }
