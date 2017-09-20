@@ -8,11 +8,11 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 /* Some default styles to make each box visible */
 .box {
-  color:white;
-  font-size: 20px;
+  color:  white;
+  font-size:  100px;
   text-align: center;
-  text-shadow:4px 4px 0 rgba(0,0,0,0.1);
-  padding:10px;
+  text-shadow:  4px 4px 0 rgba(0,0,0,0.1);
+  padding:  10px;
 }
 
 /* Colours for each box */
@@ -30,8 +30,8 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 /* We start writing out flexbox here. The above is just page setup */
 /* Justify content is how the items align on the main axis */
-.container {
-  display: flex;
+/*container {
+  display: flex;*/
   /* flex-start is the default. As the items are aligned to the flex container.
   flex-end starts on the right hand side because that is the end of the flex
   container. center moves the items to the middle. you don't need any margin
@@ -41,8 +41,26 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
   the justify-content. When you switch from row to column, the main axis will go
   from top to bottom instead of left to right. Remember to ask where is the main
   axis and cross axis */
-  justify-content: space-between;
+  /*justify-content: space-between;
   border: 10px solid mistyrose;
   flex-direction: column;
   min-height: 100vh;
+}*/
+
+/* Now we will talk about alignment and centering with align-items: we are
+going to be more concerned about the cross-axis which moves from top to bottom.
+If you add align-items center, you will need some height because there is no room
+to move the item vertically to the center (align items vertically centers them).
+align-items: stretch is default mode. flex-start will start them all the way at
+the top. flex-end starts it at the end. There is baseline which looks the text
+in your items and will make sure that the bottom of every single letter/number
+is aligned properly. If you flex-direction: column, you are switching the axises.
+Our cross axis is no longer top to bottom. It is now left to right. Overall align
+items is cross axis and needs to height to work. */
+
+.container {
+  display: flex;
+  border: 10px solid mistyrose;
+  height: 100vh;
+  align-items: flex-start;
 }
