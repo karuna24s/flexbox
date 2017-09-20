@@ -32,3 +32,35 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 .container {
   display:flex;
 }
+
+/*.box {*/
+  /* by setting up flex as a property, flex is connected to three other propertys
+  as well: flex-grow, flex-shrink, flex-basis. flex-grow -> when we have extra
+  space how should we divide among everybody within the same line. flex:1 is a
+  shorthand for flex-grow, flex-shrink, flex-basis to be equal to 1. Flex-basis
+  in an ideal world, before we start growing and shrinking, before we start taking
+  the extra space and alloting it to our flex items, how big should it be, how
+  wide should it be, how high(long)should it be?  */
+  /*flex-grow:  1;
+  flex-shrink: 1;
+  flex-basis: 1;
+}*/
+
+.box1 {
+  flex: 10 5 400px;
+}
+
+.box2 {
+  flex: 1 1 400px;
+}
+
+/* what happens if we have extra room that is when we use flex-grow */
+/* the default for flex-grow is 0, so when there is extra room don't do anything
+stay at your ideal space */
+/* flex shrink deals with how we sort of slim ourselves down there isn't enough
+space for all of us (flex items )*/
+/* the default flex shrink is 1. The default for flexbox is when there is not
+enough room just evenly divide it amongst yourselves and everyone is happy. Flex-
+shrink is a number of how much of myself should I give in preportion to the other
+flex item. */
+/* In flex we start with the grow, shrink and then basis.*/
